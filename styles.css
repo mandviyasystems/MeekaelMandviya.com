@@ -144,6 +144,18 @@ html {
   margin-right: 8px;  /* space between icon and text */
 }
 
+/* Portfolio links */
+.portfolio-link {
+  color: #fff;             /* white text */
+  text-decoration: none;   /* removes underline */
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.portfolio-link:hover {
+  color: #ccc;             /* subtle hover on hover */
+}
+
 .social-links a:hover {
   color: #ccc;  /* subtle hover effect */
 }
