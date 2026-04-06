@@ -159,3 +159,9 @@ html {
 .social-links a:hover {
   color: #ccc;  /* subtle hover effect */
 }
+.section-title {
+  text-align: center; /* centers the title */
+  font-size: 3rem;    /* makes it big, adjust as needed */
+  font-weight: bold;  /* emphasizes it */
+  margin-bottom: 1rem;
+}
