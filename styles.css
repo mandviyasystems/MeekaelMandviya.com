@@ -7,7 +7,7 @@ body {
   line-height: 1.6;
 }
 
-/* Make all headings white */
+/* Headings */
 h1, h2, h3, h4, h5, h6 {
   color: #fff;
 }
@@ -63,17 +63,20 @@ section {
   background-color: #111;
   padding: 20px 30px;
   border-radius: 10px;
-  transition: 0.3s;
-}
-
-.service-card a {
+  text-decoration: none; /* in case it's an <a> */
   color: #fff;
-  text-decoration: none;
   font-weight: bold;
+  text-align: center;
+  display: inline-block;
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
 }
 
+/* Hover effect for service cards */
 .service-card:hover {
-  background-color: #222;
+  background-color: #222;                   /* darken */
+  transform: translateY(-5px);              /* lift */
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3); /* shadow */
+  cursor: pointer;
 }
 
 /* Contact Form */
@@ -113,7 +116,7 @@ button:hover {
   font-style: italic;
 }
 
-/* Smooth scrolling for single page */
+/* Smooth scrolling */
 html {
   scroll-behavior: smooth;
 }
@@ -125,58 +128,65 @@ html {
     gap: 15px;
   }
 }
-/* Social Links under bio */
+
+/* Social Links */
 .social-links {
   margin-top: 15px;
-  /* No text-align, so it stays left-aligned */
 }
 
 .social-links a {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
-  margin-right: 20px;  /* space between LinkedIn and Instagram */
+  margin-right: 20px;
   transition: color 0.3s;
   font-size: 18px;
 }
 
+.social-links a:hover {
+  color: #ccc;
+}
+
 .social-links a i {
-  margin-right: 8px;  /* space between icon and text */
+  margin-right: 8px;
 }
 
 /* Portfolio links */
 .portfolio-link {
-  color: #fff;             /* white text */
-  text-decoration: none;   /* removes underline */
+  color: #fff;
+  text-decoration: none;
   font-weight: bold;
   transition: color 0.3s;
 }
 
 .portfolio-link:hover {
-  color: #ccc;             /* subtle hover on hover */
+  color: #ccc;
 }
 
-.social-links a:hover {
-  color: #ccc;  /* subtle hover effect */
-}
+/* Section titles */
 .section-title {
-  text-align: center; /* centers the title */
-  font-size: 3rem;    /* makes it big, adjust as needed */
-  font-weight: bold;  /* emphasizes it */
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
   margin-bottom: 1rem;
 }
+
+/* CTA Button */
 .cta-button {
-  background-color: #1e1e1e; /* match service cards */
-  color: #fff !important;    /* force white text */
+  background-color: #1e1e1e;
+  color: #fff !important;
   padding: 15px 25px;
   border-radius: 10px;
-  text-decoration: none !important; /* remove underline */
+  text-decoration: none !important;
   display: inline-block;
   font-weight: bold;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
 }
 
+/* CTA hover effect (matches service cards) */
 .cta-button:hover {
+  background-color: #222;
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  cursor: pointer;
 }
