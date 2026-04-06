@@ -165,3 +165,18 @@ html {
   font-weight: bold;  /* emphasizes it */
   margin-bottom: 1rem;
 }
+.cta-button {
+  background-color: #1e1e1e; /* match service cards */
+  color: #fff !important;    /* force white text */
+  padding: 15px 25px;
+  border-radius: 10px;
+  text-decoration: none !important; /* remove underline */
+  display: inline-block;
+  font-weight: bold;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.cta-button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
