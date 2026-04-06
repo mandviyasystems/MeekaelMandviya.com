@@ -63,12 +63,27 @@ section {
   background-color: #111;
   padding: 20px 30px;
   border-radius: 10px;
-  text-decoration: none; /* in case it's an <a> */
-  color: #fff;
+  color: #fff;              /* white text */
+  text-decoration: none;
   font-weight: bold;
   text-align: center;
   display: inline-block;
   transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+  cursor: pointer;
+}
+
+/* Make all links inside service cards white */
+.service-card a {
+  color: #fff !important;       /* force white */
+  text-decoration: none !important;
+  font-weight: bold;
+}
+
+.service-card a:visited,
+.service-card a:hover,
+.service-card a:active {
+  color: #fff !important;
+  text-decoration: none !important;
 }
 
 /* Hover effect for service cards */
@@ -76,7 +91,6 @@ section {
   background-color: #222;                   /* darken */
   transform: translateY(-5px);              /* lift */
   box-shadow: 0 10px 20px rgba(0,0,0,0.3); /* shadow */
-  cursor: pointer;
 }
 
 /* Contact Form */
