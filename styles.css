@@ -204,3 +204,22 @@ html {
   box-shadow: 0 10px 20px rgba(0,0,0,0.3);
   cursor: pointer;
 }
+
+/* Splash Text Animation */
+.splash-text {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: splashFade 1.2s forwards; /* duration + forwards keeps it visible */
+  animation-delay: 0.3s; /* slight delay for smooth effect */
+}
+
+@keyframes splashFade {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
