@@ -39,28 +39,33 @@ section {
   text-align: center;
 }
 
-/* Section Titles (SAFE animation) */
+/* SECTION TITLES (FIXED + SAFE ANIMATION) */
 .section-title {
   font-size: 3rem;
   font-weight: bold;
   margin-bottom: 1rem;
   display: inline-block;
-  animation: splash 1s ease-out;
+
+  opacity: 1;
+  animation: splash 0.8s ease-out;
 }
 
-/* Splash animation (no opacity risk) */
+/* Splash animation */
 @keyframes splash {
   0% {
     transform: scale(0.6) translateY(-40px);
+    opacity: 0.5;
   }
   60% {
     transform: scale(1.1) translateY(10px);
+    opacity: 1;
   }
   80% {
     transform: scale(0.95) translateY(-5px);
   }
   100% {
     transform: scale(1) translateY(0);
+    opacity: 1;
   }
 }
 
@@ -95,18 +100,17 @@ section {
   display: inline-block;
   cursor: pointer;
 
-  /* animation */
   animation: fadeUp 0.8s ease-out;
 }
 
-/* stagger */
+/* Stagger effect */
 .service-card:nth-child(1) { animation-delay: 0.2s; }
 .service-card:nth-child(2) { animation-delay: 0.4s; }
 .service-card:nth-child(3) { animation-delay: 0.6s; }
 .service-card:nth-child(4) { animation-delay: 0.8s; }
 .service-card:nth-child(5) { animation-delay: 1s; }
 
-/* hover */
+/* Hover */
 .service-card:hover {
   background-color: #222;
   transform: translateY(-5px);
@@ -129,6 +133,7 @@ section {
   display: inline-block;
   font-weight: bold;
   margin-top: 15px;
+
   animation: fadeUp 1s ease-out;
 }
 
@@ -144,6 +149,7 @@ section {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
+
   animation: fadeUp 1s ease-out;
 }
 
@@ -151,7 +157,7 @@ section {
   color: #ccc;
 }
 
-/* Socials */
+/* Social links */
 .social-links a {
   color: #fff;
   text-decoration: none;
@@ -191,7 +197,7 @@ button:hover {
   background: #ccc;
 }
 
-/* Universal animation */
+/* Fade-up animation for cards, buttons, etc */
 @keyframes fadeUp {
   from {
     opacity: 0;
