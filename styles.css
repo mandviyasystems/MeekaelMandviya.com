@@ -39,13 +39,12 @@ section {
   text-align: center;
 }
 
-/* SECTION TITLES (SAFE ANIMATION) */
+/* SECTION TITLES (clean + safe animation) */
 .section-title {
   font-size: 3rem;
   font-weight: bold;
   margin-bottom: 1rem;
   display: inline-block;
-  opacity: 1;
   animation: splash 0.8s ease-out;
 }
 
@@ -80,7 +79,7 @@ section {
   animation: fadeUp 1s ease-out;
 }
 
-/* Services Container */
+/* Services */
 .services-container {
   display: flex;
   flex-wrap: wrap;
@@ -88,7 +87,6 @@ section {
   gap: 20px;
 }
 
-/* Service Cards with Automatic Stagger */
 .service-card {
   background-color: #111;
   padding: 20px 30px;
@@ -100,20 +98,34 @@ section {
   display: inline-block;
   cursor: pointer;
 
-  animation: fadeUp 0.8s ease-out forwards;
-  animation-delay: calc(0.2s * (var(--i, 1))); /* default stagger */
+  /* load animation */
+  animation: fadeUp 0.8s ease-out;
+
+  /* smooth hover */
+  transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
 }
 
-/* Automatically assign --i to each card using nth-child */
-.service-card:nth-child(n) {
-  --i: n;
-}
-
-/* Hover effect */
+/* Hover = BOUNCE */
 .service-card:hover {
   background-color: #222;
-  transform: translateY(-5px);
+  animation: hoverBounce 0.5s ease;
   box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+/* Bounce animation */
+@keyframes hoverBounce {
+  0% {
+    transform: scale(1) translateY(0);
+  }
+  40% {
+    transform: scale(1.1) translateY(-8px);
+  }
+  70% {
+    transform: scale(0.95) translateY(4px);
+  }
+  100% {
+    transform: scale(1) translateY(0);
+  }
 }
 
 /* Force links white inside cards */
@@ -132,12 +144,14 @@ section {
   display: inline-block;
   font-weight: bold;
   margin-top: 15px;
+
   animation: fadeUp 1s ease-out;
+  transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
 }
 
 .cta-button:hover {
   background-color: #222;
-  transform: translateY(-5px);
+  animation: hoverBounce 0.5s ease;
 }
 
 /* Portfolio links */
@@ -147,6 +161,7 @@ section {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
+
   animation: fadeUp 1s ease-out;
 }
 
@@ -194,7 +209,7 @@ button:hover {
   background: #ccc;
 }
 
-/* Fade-up animation for cards, buttons, etc */
+/* Fade-up animation */
 @keyframes fadeUp {
   from {
     opacity: 0;
