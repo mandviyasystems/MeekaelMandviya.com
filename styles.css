@@ -2,8 +2,8 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #000;  /* black background */
-  color: #fff;             /* white text */
+  background-color: #000;
+  color: #fff;
   line-height: 1.6;
 }
 
@@ -12,7 +12,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
 }
 
-/* Navigation Bar */
+/* Navbar */
 .navbar ul {
   list-style: none;
   display: flex;
@@ -39,15 +39,41 @@ section {
   text-align: center;
 }
 
-/* About Me Image */
+/* Section Titles (SAFE animation) */
+.section-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  display: inline-block;
+  animation: splash 1s ease-out;
+}
+
+/* Splash animation (no opacity risk) */
+@keyframes splash {
+  0% {
+    transform: scale(0.6) translateY(-40px);
+  }
+  60% {
+    transform: scale(1.1) translateY(10px);
+  }
+  80% {
+    transform: scale(0.95) translateY(-5px);
+  }
+  100% {
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* About Image */
 .about-pic {
-  display: block;
   width: 200px;
   height: 200px;
   object-fit: cover;
   border-radius: 50%;
   border: 2px solid #fff;
   margin: 20px auto;
+  display: block;
+  animation: fadeUp 1s ease-out;
 }
 
 /* Services */
@@ -56,133 +82,41 @@ section {
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
-  margin-top: 20px;
 }
 
 .service-card {
   background-color: #111;
   padding: 20px 30px;
   border-radius: 10px;
-  color: #fff;              /* white text */
-  text-decoration: none;
+  color: #fff;
   font-weight: bold;
   text-align: center;
+  text-decoration: none;
   display: inline-block;
-  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
   cursor: pointer;
+
+  /* animation */
+  animation: fadeUp 0.8s ease-out;
 }
 
-/* Make all links inside service cards white */
+/* stagger */
+.service-card:nth-child(1) { animation-delay: 0.2s; }
+.service-card:nth-child(2) { animation-delay: 0.4s; }
+.service-card:nth-child(3) { animation-delay: 0.6s; }
+.service-card:nth-child(4) { animation-delay: 0.8s; }
+.service-card:nth-child(5) { animation-delay: 1s; }
+
+/* hover */
+.service-card:hover {
+  background-color: #222;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+/* Force links white */
 .service-card a {
-  color: #fff !important;       /* force white */
-  text-decoration: none !important;
-  font-weight: bold;
-}
-
-.service-card a:visited,
-.service-card a:hover,
-.service-card a:active {
   color: #fff !important;
   text-decoration: none !important;
-}
-
-/* Hover effect for service cards */
-.service-card:hover {
-  background-color: #222;                   /* darken */
-  transform: translateY(-5px);              /* lift */
-  box-shadow: 0 10px 20px rgba(0,0,0,0.3); /* shadow */
-}
-
-/* Contact Form */
-form {
-  display: flex;
-  flex-direction: column;
-  max-width: 500px;
-  margin: 0 auto;
-  gap: 15px;
-}
-
-input, textarea {
-  padding: 10px;
-  border: 1px solid #fff;
-  border-radius: 5px;
-  background-color: #111;
-  color: #fff;
-}
-
-button {
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  background-color: #fff;
-  color: #000;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-button:hover {
-  background-color: #ccc;
-}
-
-/* Portfolio Section */
-#portfolio p {
-  font-style: italic;
-}
-
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .services-container {
-    flex-direction: column;
-    gap: 15px;
-  }
-}
-
-/* Social Links */
-.social-links {
-  margin-top: 15px;
-}
-
-.social-links a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  margin-right: 20px;
-  transition: color 0.3s;
-  font-size: 18px;
-}
-
-.social-links a:hover {
-  color: #ccc;
-}
-
-.social-links a i {
-  margin-right: 8px;
-}
-
-/* Portfolio links */
-.portfolio-link {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s;
-}
-
-.portfolio-link:hover {
-  color: #ccc;
-}
-
-/* Section titles */
-.section-title {
-  text-align: center;
-  font-size: 3rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
 }
 
 /* CTA Button */
@@ -194,73 +128,77 @@ html {
   text-decoration: none !important;
   display: inline-block;
   font-weight: bold;
-  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+  margin-top: 15px;
+  animation: fadeUp 1s ease-out;
 }
 
-/* CTA hover effect (matches service cards) */
 .cta-button:hover {
   background-color: #222;
   transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+/* Portfolio links */
+.portfolio-link {
+  display: block;
+  margin: 10px 0;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  animation: fadeUp 1s ease-out;
+}
+
+.portfolio-link:hover {
+  color: #ccc;
+}
+
+/* Socials */
+.social-links a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 20px;
+  font-weight: bold;
+}
+
+.social-links a:hover {
+  color: #ccc;
+}
+
+/* Forms */
+form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input, textarea {
+  padding: 10px;
+  background: #111;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+button {
+  padding: 12px;
+  background: #fff;
+  color: #000;
+  font-weight: bold;
   cursor: pointer;
 }
 
-/* Splash Text Animation */
-.splash-text {
-  opacity: 0;
-  transform: translateY(50px);
-  animation: splashFade 1.2s forwards; /* duration + forwards keeps it visible */
-  animation-delay: 0.3s; /* slight delay for smooth effect */
+button:hover {
+  background: #ccc;
 }
 
-@keyframes splashFade {
-  0% {
+/* Universal animation */
+@keyframes fadeUp {
+  from {
     opacity: 0;
-    transform: translateY(50px);
+    transform: translateY(40px);
   }
-  100% {
+  to {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-/* Animate all section titles */
-.section-title {
-  display: inline-block;
-  opacity: 0;
-  animation: splash 1s ease-out forwards;
-}
-
-/* Optional: delay animation for each section if you want staggered effect */
-#home .section-title {
-  animation-delay: 0s;
-}
-#about-ms .section-title {
-  animation-delay: 0.3s;
-}
-#about-founder .section-title {
-  animation-delay: 0.6s;
-}
-#services .section-title {
-  animation-delay: 0.9s;
-}
-#portfolio .section-title {
-  animation-delay: 1.2s;
-}
-
-/* Keyframes for the splash effect */
-@keyframes splash {
-  0% {
-    transform: scale(0.5) translateY(-50px);
-    opacity: 0;
-  }
-  60% {
-    transform: scale(1.1) translateY(10px);
-    opacity: 1;
-  }
-  80% {
-    transform: scale(0.95) translateY(-5px);
-  }
-  100% {
-    transform: scale(1) translateY(0);
   }
 }
