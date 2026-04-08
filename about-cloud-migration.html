@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Cloud Migration - Mandviya Systems</title>
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="stylesheet" href="styles.css">
+  <!-- Font Awesome (optional for future icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- AOS CSS for scroll animations -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <nav class="navbar">
+      <ul>
+        <li><a href="about-ms.html">About MS</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about-cloud-migration.html" class="active">Cloud Migration</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- About Cloud Migration Section -->
+  <section id="about-cloud" data-aos="fade-up">
+    <h2 class="section-title">About Cloud Migration</h2>
+
+    <!-- Short Summary -->
+    <p data-aos="fade-up" data-aos-delay="100">
+      Cloud migration is the process of moving your business's digital assets, applications, and IT resources 
+      from on-premises systems or other cloud environments to a modern, scalable cloud platform. 
+      This ensures improved performance, security, and cost efficiency for your operations.
+    </p>
+
+    <!-- Detailed Explanation -->
+    <details data-aos="fade-up" data-aos-delay="200">
+      <summary>Learn more about our cloud migration process</summary>
+      <div class="cloud-migration-details">
+        <h3>Step 1: Assessment</h3>
+        <p>We analyze your current IT environment, workloads, and business needs to create a tailored migration plan.</p>
+
+        <h3>Step 2: Planning & Strategy</h3>
+        <p>We design a step-by-step migration roadmap, selecting the right cloud platform and defining security measures.</p>
+
+        <h3>Step 3: Migration & Testing</h3>
+        <p>We securely transfer your applications and data to the cloud, thoroughly testing performance, compatibility, and security.</p>
+
+        <h3>Step 4: Optimization & Monitoring</h3>
+        <p>After migration, we fine-tune your cloud setup for cost efficiency and performance, while monitoring systems for ongoing reliability.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- AOS JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      AOS.init({
+        duration: 800,
+        once: true
+      });
+      AOS.refresh();
+    });
+  </script>
+
+</body>
+</html>
