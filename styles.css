@@ -251,3 +251,9 @@ button:hover {
   height: auto;
   opacity: 0.9;
 }
+.home-logo {
+  display: block;
+  margin: 10px auto 20px auto; /* centers the logo */
+  width: 200px; /* adjust size as needed */
+  height: auto;
+}
