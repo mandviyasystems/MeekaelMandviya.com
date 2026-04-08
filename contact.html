@@ -6,39 +6,52 @@
   <title>Contact - Meekael Mandviya</title>
   <link rel="icon" href="favicon.png" type="image/png">
   <link rel="stylesheet" href="styles.css">
+  <!-- AOS CSS for scroll animations -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 <body>
 
   <!-- Navigation -->
   <header>
-   <nav class="navbar">
+    <nav class="navbar">
       <ul>
-      <li><a href="about-ms.html" class="active">About MS</a></li>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="portfolio.html">Portfolio</a></li>
-      <li><a href="contact.html">Contact</a></li>
-  
+        <li><a href="about-ms.html">About MS</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
       </ul>
-</nav>
-
+    </nav>
   </header>
 
   <!-- Contact Section -->
- <section id="contact">
-  <h2>Contact Me</h2>
+  <section id="contact" data-aos="fade-up">
+    <h2 data-aos="fade-up">Contact Me</h2>
 
-  <form action="https://formspree.io/f/mojwwaaw" method="POST">
-    <input type="text" name="name" placeholder="Your Name" required>
+    <form action="https://formspree.io/f/mojwwaaw" method="POST" data-aos="fade-up" data-aos-delay="100">
+      <input type="text" name="name" placeholder="Your Name" required data-aos="fade-up" data-aos-delay="150">
+      <input type="email" name="email" placeholder="Your Email" required data-aos="fade-up" data-aos-delay="200">
+      <textarea
+        name="message"
+        placeholder="Tell me about your situation, the problem you're facing, and which service you're interested in."
+        required
+        data-aos="fade-up" data-aos-delay="250"
+      ></textarea>
+      <button type="submit" data-aos="fade-up" data-aos-delay="300">Send</button>
+    </form>
+  </section>
 
-    <input type="email" name="email" placeholder="Your Email" required>
+  <!-- AOS JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      AOS.init({
+        duration: 800, // matches other pages
+        once: true     // animate only once
+      });
+      AOS.refresh();   // triggers animation even if section is already visible
+    });
+  </script>
 
-    <textarea
-      name="message"
-      placeholder="Tell me about your situation, the problem you're facing, and which service you're interested in."
-      required
-    ></textarea>
-
-    <button type="submit">Send</button>
-  </form>
-</section>
+</body>
+</html>
