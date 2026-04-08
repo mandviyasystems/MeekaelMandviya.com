@@ -6,68 +6,84 @@
   <title>About Cloud Migration - Mandviya Systems</title>
   <link rel="icon" href="favicon.png" type="image/png">
   <link rel="stylesheet" href="styles.css">
-  <!-- Font Awesome for future icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <!-- AOS CSS -->
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 <body>
 
-  <!-- Navigation -->
-  <header>
-    <nav class="navbar">
-      <ul>
-        <li><a href="about-ms.html">About MS</a></li>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about-cloud-migration.html"> About Cloud Migration</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+<!-- Navigation -->
+<header>
+  <nav class="navbar">
+    <ul>
+      <li><a href="about-ms.html">About MS</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about-cloud-migration.html" class="active">About Cloud Migration</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 
-  <!-- About Cloud Migration Section -->
-  <section id="about-cloud" data-aos="fade-up">
-    <h1 class="section-title">About Cloud Migration</h1>
+<!-- Cloud Migration Section -->
+<section id="about-cloud" data-aos="fade-up">
+  <h1 class="section-title">About Cloud Migration</h1>
 
-    <!-- Short Summary -->
-    <p data-aos="fade-up" data-aos-delay="100">
-      Cloud migration is the process of moving your business's digital assets, applications, and IT resources 
-      from on-premises systems or other cloud environments to a modern, scalable cloud platform. 
-      This improves performance, security, and cost efficiency for your operations.
-    </p>
+  <!-- Summary -->
+  <p data-aos="fade-up" data-aos-delay="100">
+    Cloud migration is the process of moving your business’s digital assets, applications, and IT resources 
+    from on-premises systems or other environments to a modern, scalable cloud platform. 
+    This improves performance, enhances security, and reduces operational costs.
+  </p>
 
-    <!-- Detailed Explanation -->
-    <details data-aos="fade-up" data-aos-delay="200">
-      <summary>Learn more about our cloud migration process</summary>
-      <div class="cloud-migration-details">
-        <h3>Step 1: Assessment</h3>
-        <p>We analyze your current IT environment, workloads, and business needs to create a tailored migration plan.</p>
+  <!-- Process Dropdown -->
+  <details data-aos="fade-up" data-aos-delay="200">
+    <summary>Learn more about our cloud migration process</summary>
 
-        <h3>Step 2: Planning & Strategy</h3>
-        <p>We design a step-by-step migration roadmap, selecting the right cloud platform and defining security measures.</p>
+    <div class="cloud-migration-details">
+      <h3>Step 1: Assessment</h3>
+      <p>We evaluate your current systems, workloads, and business requirements to build a tailored migration plan.</p>
 
-        <h3>Step 3: Migration & Testing</h3>
-        <p>We securely transfer your applications and data to the cloud, thoroughly testing performance, compatibility, and security.</p>
+      <h3>Step 2: Planning & Strategy</h3>
+      <p>A structured roadmap is created, selecting the right cloud platform and defining security and deployment strategies.</p>
 
-        <h3>Step 4: Optimization & Monitoring</h3>
-        <p>After migration, we fine-tune your cloud setup for cost efficiency and performance, while monitoring systems for ongoing reliability.</p>
-      </div>
-    </details>
-  </section>
+      <h3>Step 3: Migration & Testing</h3>
+      <p>Your data and applications are securely migrated and thoroughly tested to ensure performance and reliability.</p>
 
-  <!-- AOS JS -->
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      AOS.init({
-        duration: 800,
-        once: true
-      });
-      AOS.refresh();
+      <h3>Step 4: Optimization & Monitoring</h3>
+      <p>We optimize your cloud environment for efficiency and continuously monitor systems to maintain performance and security.</p>
+    </div>
+  </details>
+
+  <!-- Benefits Section (SEPARATE) -->
+  <h3 data-aos="fade-up" data-aos-delay="300">Benefits of Cloud Migration</h3>
+
+  <div class="cloud-benefits" data-aos="fade-up" data-aos-delay="400">
+    <p><strong>Scalability:</strong> Easily scale resources as your business grows.</p>
+
+    <p><strong>Cost Efficiency:</strong> Reduce infrastructure and maintenance expenses.</p>
+
+    <p><strong>Improved Security:</strong> Advanced protection and regular system updates.</p>
+
+    <p><strong>Better Performance:</strong> Faster systems with higher uptime and reliability.</p>
+
+    <p><strong>Remote Accessibility:</strong> Access your systems from anywhere at any time.</p>
+
+    <p><strong>Disaster Recovery:</strong> Built-in backups ensure quick recovery from failures or data loss.</p>
+  </div>
+
+</section>
+
+<!-- AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    AOS.init({
+      duration: 800,
+      once: true
     });
-  </script>
+  });
+</script>
 
 </body>
 </html>
