@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact - Meekael Mandviya</title>
 
-  <link rel="icon" href="favicon.png" type="image/png">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="favicon.png" type="image/png" />
+  <link rel="stylesheet" href="styles.css" />
 
-  <!-- Font Awesome (for icons) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
-  <!-- AOS CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <!-- AOS Animation -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -37,64 +37,48 @@
 
       <h2 data-aos="fade-up">Contact Me</h2>
 
-      <form action="<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact - Meekael Mandviya</title>
+      <!-- FORM -->
+      <form action="https://formspree.io/f/xkokznql" method="POST" data-aos="fade-up" data-aos-delay="100">
 
-  <link rel="icon" href="favicon.png" type="image/png">
-  <link rel="stylesheet" href="styles.css">
+        <input 
+          type="text" 
+          name="name" 
+          placeholder="Your Name" 
+          required 
+          data-aos="fade-up" 
+          data-aos-delay="150"
+        />
 
-  <!-- Font Awesome (for icons) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <input 
+          type="email" 
+          name="email" 
+          placeholder="Your Email" 
+          required 
+          data-aos="fade-up" 
+          data-aos-delay="200"
+        />
 
-  <!-- AOS CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-</head>
+        <input 
+          type="text" 
+          name="service" 
+          placeholder="What service do you need?" 
+          required 
+          data-aos="fade-up" 
+          data-aos-delay="225"
+        />
 
-<body>
-
-  <!-- NAVBAR -->
-  <header>
-    <nav class="navbar">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="pricing.html">Pricing</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <!-- CONTACT SECTION -->
-  <main>
-    <section id="contact" data-aos="fade-up">
-
-      <h2 data-aos="fade-up">Contact Me</h2>
-
-      <form action="https://formspree.io/f/xkokznql" method="POST"
-        data-aos="fade-up" data-aos-delay="100">
-
-        <input type="text" name="name" placeholder="Your Name" required
-          data-aos="fade-up" data-aos-delay="150">
-
-        <input type="email" name="email" placeholder="Your Email" required
-          data-aos="fade-up" data-aos-delay="200">
-
-        <textarea
-          name="message"
-          placeholder="Tell me about your situation, the problem you're facing, and which service you're interested in."
-          required
-          data-aos="fade-up"
-          data-aos-delay="250"></textarea>
+        <textarea 
+          name="message" 
+          placeholder="Describe your project, issue, or goal..." 
+          required 
+          data-aos="fade-up" 
+          data-aos-delay="250"
+        ></textarea>
 
         <button type="submit" data-aos="fade-up" data-aos-delay="300">
-          Send
+          Send Message
         </button>
+
       </form>
 
       <!-- SOCIAL LINKS -->
@@ -113,7 +97,7 @@
     </section>
   </main>
 
-  <!-- AOS JS -->
+  <!-- AOS SCRIPT -->
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
     document.addEventListener("DOMContentLoaded", function () {
@@ -121,57 +105,6 @@
         duration: 800,
         once: true
       });
-      AOS.refresh();
-    });
-  </script>
-
-</body>
-</html>" method="POST"
-        data-aos="fade-up" data-aos-delay="100">
-
-        <input type="text" name="name" placeholder="Your Name" required
-          data-aos="fade-up" data-aos-delay="150">
-
-        <input type="email" name="email" placeholder="Your Email" required
-          data-aos="fade-up" data-aos-delay="200">
-
-        <textarea
-          name="message"
-          placeholder="Tell me about your situation, the problem you're facing, and which service you're interested in."
-          required
-          data-aos="fade-up"
-          data-aos-delay="250"></textarea>
-
-        <button type="submit" data-aos="fade-up" data-aos-delay="300">
-          Send
-        </button>
-      </form>
-
-      <!-- SOCIAL LINKS -->
-      <div class="social-links" data-aos="fade-up" data-aos-delay="350">
-        <h3>Connect with me</h3>
-
-        <a href="https://www.linkedin.com/in/meekael-mandviya-452090297/" target="_blank">
-          <i class="fab fa-linkedin"></i> LinkedIn
-        </a>
-
-        <a href="https://www.instagram.com/meekael_mandviya" target="_blank">
-          <i class="fab fa-instagram"></i> Instagram
-        </a>
-      </div>
-
-    </section>
-  </main>
-
-  <!-- AOS JS -->
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      AOS.init({
-        duration: 800,
-        once: true
-      });
-      AOS.refresh();
     });
   </script>
 
