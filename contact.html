@@ -38,58 +38,86 @@
       <h2 data-aos="fade-up">Contact Me</h2>
 
       <!-- FORM -->
-      <form action="https://formspree.io/f/xkokznql" method="POST" data-aos="fade-up" data-aos-delay="100">
+      <form
+        action="https://formspree.io/f/xkokznql"
+        method="POST"
+        data-aos="fade-up"
+        data-aos-delay="100"
+      >
 
-        <input 
-          type="text" 
-          name="name" 
-          placeholder="Your Name" 
-          required 
-          data-aos="fade-up" 
+        <!-- Redirect back to this page after submit -->
+        <input
+          type="hidden"
+          name="_next"
+          value="https://mandviyasystems.github.io/MeekaelMandviya.com/contact.html"
+        />
+
+        <input
+          type="text"
+          name="name"
+          placeholder="Your Name"
+          required
+          data-aos="fade-up"
           data-aos-delay="150"
         />
 
-        <input 
-          type="email" 
-          name="email" 
-          placeholder="Your Email" 
-          required 
-          data-aos="fade-up" 
+        <input
+          type="email"
+          name="email"
+          placeholder="Your Email"
+          required
+          data-aos="fade-up"
           data-aos-delay="200"
         />
 
-        <input 
-          type="text" 
-          name="service" 
-          placeholder="What service do you need?" 
-          required 
-          data-aos="fade-up" 
+        <input
+          type="text"
+          name="service"
+          placeholder="What service do you need?"
+          required
+          data-aos="fade-up"
           data-aos-delay="225"
         />
 
-        <textarea 
-          name="message" 
-          placeholder="Describe your project, issue, or goal..." 
-          required 
-          data-aos="fade-up" 
+        <textarea
+          name="message"
+          placeholder="Describe your project, issue, or goal..."
+          required
+          data-aos="fade-up"
           data-aos-delay="250"
         ></textarea>
 
-        <button type="submit" data-aos="fade-up" data-aos-delay="300">
+        <button
+          type="submit"
+          data-aos="fade-up"
+          data-aos-delay="300"
+        >
           Send Message
         </button>
 
       </form>
 
       <!-- SOCIAL LINKS -->
-      <div class="social-links" data-aos="fade-up" data-aos-delay="350">
+      <div
+        class="social-links"
+        data-aos="fade-up"
+        data-aos-delay="350"
+      >
         <h3>Connect with me</h3>
 
-        <a href="https://www.linkedin.com/in/meekael-mandviya-452090297/" target="_blank">
+        <a
+          href="https://www.linkedin.com/in/meekael-mandviya-452090297/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <i class="fab fa-linkedin"></i> LinkedIn
         </a>
 
-        <a href="https://www.instagram.com/meekael_mandviya" target="_blank">
+        <a
+          href="https://www.instagram.com/meekael_mandviya"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <i class="fab fa-instagram"></i> Instagram
         </a>
       </div>
@@ -99,12 +127,21 @@
 
   <!-- AOS SCRIPT -->
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       AOS.init({
         duration: 800,
         once: true
       });
+    });
+
+    /* Clear form if page is restored from browser cache */
+    window.addEventListener("pageshow", function () {
+      const form = document.querySelector("form");
+      if (form) {
+        form.reset();
+      }
     });
   </script>
 
