@@ -256,3 +256,267 @@ button:hover {
   animation: hoverBounce 0.5s ease;
   box-shadow: 0 10px 20px rgba(0,0,0,0.3);
 }
+
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #000;
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: #fff;
+}
+
+/* Navbar */
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px 0;
+  margin: 0;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.navbar ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Sections */
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+/* Section Titles */
+.section-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  display: inline-block;
+  animation: splash 0.8s ease-out;
+}
+
+/* Splash animation */
+@keyframes splash {
+  0% {
+    transform: scale(0.6) translateY(-40px);
+    opacity: 0.5;
+  }
+  60% {
+    transform: scale(1.1) translateY(10px);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Services Container */
+.services-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Service Cards */
+.service-card {
+  display: block;
+  background-color: #111;
+  padding: 20px 30px;
+  border-radius: 10px;
+
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+
+  cursor: pointer;
+  animation: fadeUp 0.8s ease-out;
+
+  transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+}
+
+/* Hover bounce (ORIGINAL) */
+.service-card:hover {
+  background-color: #222;
+  animation: hoverBounce 0.5s ease;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+/* Bounce animation */
+@keyframes hoverBounce {
+  0% {
+    transform: scale(1) translateY(0);
+  }
+  40% {
+    transform: scale(1.1) translateY(-8px);
+  }
+  70% {
+    transform: scale(0.95) translateY(4px);
+  }
+  100% {
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* CTA Button */
+.cta-button {
+  display: inline-block;
+  background-color: #1e1e1e;
+  color: #fff;
+  padding: 15px 25px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 15px;
+
+  animation: fadeUp 1s ease-out;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.cta-button:hover {
+  background-color: #222;
+  animation: hoverBounce 0.5s ease;
+}
+
+/* Portfolio links */
+.portfolio-link {
+  display: block;
+  margin: 10px 0;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  animation: fadeUp 1s ease-out;
+}
+
+.portfolio-link:hover {
+  color: #ccc;
+}
+
+/* Social links */
+.social-links a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 20px;
+  font-weight: bold;
+}
+
+.social-links a:hover {
+  color: #ccc;
+}
+
+/* Forms */
+form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input, textarea {
+  padding: 10px;
+  background: #111;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+button {
+  padding: 12px;
+  background: #fff;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #ccc;
+}
+
+/* Fade-up animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Founder image */
+.about-pic {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Founder section */
+.founder-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Logos */
+.about-logo {
+  display: block;
+  margin: 10px auto;
+  width: 180px;
+  height: auto;
+}
+
+.home-logo {
+  display: block;
+  margin: 10px auto 20px auto;
+  width: 200px;
+  height: auto;
+}
+
+/* Pricing */
+.pricing-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.pricing-card {
+  background-color: #111;
+  padding: 25px 30px;
+  border-radius: 10px;
+  width: 250px;
+  text-align: center;
+
+  animation: fadeUp 0.8s ease-out;
+  transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+}
+
+.pricing-card:hover {
+  background-color: #222;
+  animation: hoverBounce 0.5s ease;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+#calculator button:hover {
+  background-color: #222;
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
