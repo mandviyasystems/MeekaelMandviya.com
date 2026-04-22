@@ -13,7 +13,6 @@
 
 <body>
 
-<!-- NAVIGATION -->
 <header>
   <nav class="navbar">
     <ul>
@@ -27,84 +26,84 @@
   </nav>
 </header>
 
-<!-- PRICING -->
-<section id="pricing" data-aos="fade-up">
+<section id="pricing">
 
   <h1 class="section-title">Pricing</h1>
 
-  <p data-aos="fade-up" data-aos-delay="100">
+  <p>
     Pricing is tailored based on project scope, technical requirements, and business goals.
-    Mandviya Systems provides end-to-end digital services including website development,
-    cloud infrastructure, system migrations, and technical advisory where required.
   </p>
 
-  <!-- TIERS -->
   <div class="pricing-container">
 
-    <!-- Starter -->
-    <div class="pricing-card" data-aos="fade-up" data-aos-delay="200">
+    <div class="pricing-card">
       <h2>Starter Websites & Deployment</h2>
       <h3>From $750</h3>
-      <p>
-        Clean, professional websites and lightweight deployments for small businesses
-        needing a modern and functional online presence.
-      </p>
+      <p>Professional websites and lightweight deployments for businesses needing a modern online presence.</p>
     </div>
 
-    <!-- Business -->
-    <div class="pricing-card" data-aos="fade-up" data-aos-delay="300">
+    <div class="pricing-card">
       <h2>Business Websites & Systems</h2>
       <h3>$2,000 – $6,000+</h3>
-      <p>
-        Full-scale websites with structured pages, improved user flow, integrations,
-        and lead generation systems designed to support business growth.
-      </p>
+      <p>Growth-focused websites, integrations, user flow improvements, and lead systems.</p>
     </div>
 
-    <!-- Cloud -->
-    <div class="pricing-card" data-aos="fade-up" data-aos-delay="400">
+    <div class="pricing-card">
       <h2>Cloud Migration & Infrastructure</h2>
       <h3>$5,000 – $15,000+</h3>
-      <p>
-        End-to-end migrations including lift-and-shift, AWS setup, deployment,
-        infrastructure configuration, and system optimization for performance and scalability.
-      </p>
+      <p>Lift-and-shift migrations, AWS setup, deployments, optimization, and scalable infrastructure.</p>
     </div>
 
-    <!-- Consulting -->
-    <div class="pricing-card" data-aos="fade-up" data-aos-delay="500">
-      <h2>Technical Consulting (Optional)</h2>
+    <div class="pricing-card">
+      <h2>Managed Systems Support</h2>
+      <h3>From $500/mo</h3>
+      <p>Ongoing monitoring, maintenance, minor fixes, optimization, and priority technical support.</p>
+    </div>
+
+    <div class="pricing-card">
+      <h2>Technical Consulting</h2>
       <h3>$75 – $125/hr</h3>
-      <p>
-        Architecture guidance, system audits, troubleshooting, optimization,
-        and technical strategy for existing or planned systems.
-      </p>
+      <p>Architecture planning, audits, troubleshooting, and technical strategy.</p>
     </div>
 
   </div>
 
-  <!-- NOTE -->
-  <p data-aos="fade-up" data-aos-delay="600">
-    <strong>Note:</strong> Final pricing depends on project complexity, system size,
-    integrations, timelines, and support requirements.
+  <!-- Calculator -->
+  <section id="calculator">
+    <h2>Cost Savings Calculator</h2>
+
+    <input type="number" id="currentCost" placeholder="Current Monthly Hosting Cost ($)">
+    <input type="number" id="newCost" placeholder="Estimated Optimized Cost ($)">
+    <input type="number" id="hoursSaved" placeholder="Hours Saved Per Month">
+    <input type="number" id="hourlyRate" placeholder="Internal Hourly Cost ($)">
+
+    <button onclick="calculateSavings()">Calculate Savings</button>
+
+    <p id="result"></p>
+  </section>
+
+  <p>
+    <strong>Note:</strong> Final pricing depends on project complexity, integrations, timelines, and support level.
   </p>
 
-  <!-- CTA -->
-  <div data-aos="fade-up" data-aos-delay="700">
-    <a href="contact.html" class="cta-button">Book a Free Consultation</a>
-  </div>
+  <a href="contact.html" class="cta-button">Book a Free Consultation</a>
 
 </section>
 
-<!-- AOS -->
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    AOS.init({
-      duration: 800,
-      once: true
-    });
-  });
+function calculateSavings() {
+  const current = Number(document.getElementById("currentCost").value);
+  const optimized = Number(document.getElementById("newCost").value);
+  const hours = Number(document.getElementById("hoursSaved").value);
+  const rate = Number(document.getElementById("hourlyRate").value);
+
+  const monthly = (current - optimized) + (hours * rate);
+  const yearly = monthly * 12;
+
+  document.getElementById("result").innerHTML =
+    "Estimated Monthly Savings: $" + monthly.toFixed(2) +
+    "<br>Estimated Annual Savings: $" + yearly.toFixed(2);
+}
 </script>
 
 </body>
