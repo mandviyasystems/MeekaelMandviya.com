@@ -1,4 +1,12 @@
-/* General Styles */
+
+/* =========================
+   BASE STYLES
+========================= */
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -12,7 +20,15 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
 }
 
-/* Navbar */
+/* Paragraphs */
+p {
+  color: #d1d1d1;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
 .navbar ul {
   list-style: none;
   display: flex;
@@ -33,13 +49,19 @@ h1, h2, h3, h4, h5, h6 {
   text-decoration: underline;
 }
 
-/* Sections */
+/* =========================
+   SECTIONS
+========================= */
+
 section {
   padding: 60px 20px;
   text-align: center;
 }
 
-/* Section Titles */
+/* =========================
+   TITLES
+========================= */
+
 .section-title {
   font-size: 3rem;
   font-weight: bold;
@@ -48,7 +70,6 @@ section {
   animation: splash 0.8s ease-out;
 }
 
-/* Splash animation */
 @keyframes splash {
   0% {
     transform: scale(0.6) translateY(-40px);
@@ -64,79 +85,69 @@ section {
   }
 }
 
-/* Services Container */
-.services-container {
+/* =========================
+   CARDS (SERVICES + PRICING)
+========================= */
+
+.services-container,
+.pricing-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
 }
 
-/* ✅ CLICKABLE SERVICE CARDS (FIXED) */
-.service-card {
-  display: block; /* makes full card clickable */
+.service-card,
+.pricing-card {
   background-color: #111;
-  padding: 20px 30px;
+  padding: 25px 30px;
   border-radius: 10px;
-
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
+  width: 250px;
   text-align: center;
 
-  cursor: pointer;
+  border: 1px solid rgba(255,255,255,0.06);
 
-  /* animation */
   animation: fadeUp 0.8s ease-out;
-
-  /* smooth hover */
-  transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+  transition: all 0.25s ease;
 }
 
-/* Hover bounce */
-.service-card:hover {
+/* Hover effect */
+.service-card:hover,
+.pricing-card:hover {
   background-color: #222;
-  animation: hoverBounce 0.5s ease;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(59,130,246,0.15);
 }
 
-/* Bounce animation */
-@keyframes hoverBounce {
-  0% {
-    transform: scale(1) translateY(0);
-  }
-  40% {
-    transform: scale(1.1) translateY(-8px);
-  }
-  70% {
-    transform: scale(0.95) translateY(4px);
-  }
-  100% {
-    transform: scale(1) translateY(0);
-  }
-}
+/* =========================
+   BUTTONS
+========================= */
 
-/* CTA Button */
-.cta-button {
+.cta-button,
+button {
   display: inline-block;
-  background-color: #1e1e1e;
-  color: #fff;
-  padding: 15px 25px;
-  border-radius: 10px;
-  text-decoration: none;
+  background-color: #fff;
+  color: #000;
+  padding: 12px 20px;
+  border-radius: 8px;
   font-weight: bold;
-  margin-top: 15px;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
 
-  animation: fadeUp 1s ease-out;
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: all 0.25s ease;
 }
 
-.cta-button:hover {
-  background-color: #222;
-  animation: hoverBounce 0.5s ease;
+.cta-button:hover,
+button:hover {
+  background-color: #e5e5e5;
+  transform: translateY(-2px);
 }
 
-/* Portfolio links */
+/* =========================
+   PORTFOLIO
+========================= */
+
 .portfolio-link {
   display: block;
   margin: 10px 0;
@@ -150,7 +161,10 @@ section {
   color: #ccc;
 }
 
-/* Social links */
+/* =========================
+   SOCIAL LINKS
+========================= */
+
 .social-links a {
   color: #fff;
   text-decoration: none;
@@ -162,7 +176,10 @@ section {
   color: #ccc;
 }
 
-/* Forms */
+/* =========================
+   FORMS
+========================= */
+
 form {
   max-width: 500px;
   margin: auto;
@@ -171,26 +188,58 @@ form {
   gap: 15px;
 }
 
-input, textarea {
+input,
+textarea {
   padding: 10px;
   background: #111;
   border: 1px solid #fff;
   color: #fff;
 }
 
-button {
-  padding: 12px;
-  background: #fff;
-  color: #000;
-  font-weight: bold;
-  cursor: pointer;
+/* =========================
+   IMAGES
+========================= */
+
+.about-pic {
+  width: 200px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
 }
 
-button:hover {
-  background: #ccc;
+.about-logo {
+  display: block;
+  margin: 10px auto;
+  width: 180px;
+  height: auto;
 }
 
-/* Fade-up animation */
+.home-logo {
+  display: block;
+  margin: 10px auto 20px auto;
+  width: 200px;
+  height: auto;
+}
+
+/* =========================
+   ABOUT LAYOUT
+========================= */
+
+.founder-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+
 @keyframes fadeUp {
   from {
     opacity: 0;
@@ -200,90 +249,4 @@ button:hover {
     opacity: 1;
     transform: translateY(0);
   }
-}
-/* Founder image */
-.about-pic {
-  width: 200px;       /* sets a reasonable size */
-  height: auto;       /* keeps the aspect ratio */
-  border-radius: 10px; /* optional, makes it look nicer */
-  object-fit: cover;  /* prevents distortion if image aspect changes */
-}
-
-/* Founder section container */
-.founder-content {
-  display: flex;           /* side-by-side layout */
-  align-items: center;     /* vertical alignment */
-  justify-content: center; /* horizontal center */
-  gap: 20px;               /* space between image and text */
-  flex-wrap: wrap;         /* stacks on smaller screens */
-}
-
-/* Founder image */
-.about-pic {
-  width: 200px;       /* sets a fixed width */
-  max-width: 100%;    /* ensures it never exceeds container */
-  height: auto;       /* keeps aspect ratio */
-  border-radius: 10px; 
-  object-fit: cover;  /* prevents distortion */
-}
-
-/* Container for image + text */
-.founder-content {
-  display: flex;
-  align-items: flex-start;   /* keeps text aligned nicely */
-  justify-content: center;   /* centers horizontally */
-  gap: 20px;                 /* spacing between image and text */
-  flex-wrap: wrap;           /* stacks on mobile */
-  max-width: 1000px;         /* optional: prevent container from stretching too much */
-  margin: 0 auto;            /* center container in page */
-}
-.about-logo {
-  display: block;
-  margin: 10px auto;
-  width: 180px;
-  height: auto;
-}
-
-.about-logo-secondary {
-  display: block;
-  margin: 15px auto;
-  width: 140px;
-  height: auto;
-  opacity: 0.9;
-}
-.home-logo {
-  display: block;
-  margin: 10px auto 20px auto; /* centers the logo */
-  width: 200px; /* adjust size as needed */
-  height: auto;
-}
-.pricing-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-
-.pricing-card {
-  background-color: #111;
-  padding: 25px 30px;
-  border-radius: 10px;
-  width: 250px;
-  text-align: center;
-
-  animation: fadeUp 0.8s ease-out;
-  transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
-}
-
-.pricing-card:hover {
-  background-color: #222;
-  animation: hoverBounce 0.5s ease;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-}
-button {
- transition: 0.3s ease;
-}
-
-button:hover {
- transform: translateY(-2px);
 }
