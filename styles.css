@@ -86,12 +86,32 @@ section {
   text-align: center;
 
   cursor: pointer;
+  animation: fadeUp 0.8s ease-out;
+
   transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
 }
 
+/* Hover bounce (ORIGINAL) */
 .service-card:hover {
   background-color: #222;
+  animation: hoverBounce 0.5s ease;
   box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+/* Bounce animation */
+@keyframes hoverBounce {
+  0% {
+    transform: scale(1) translateY(0);
+  }
+  40% {
+    transform: scale(1.1) translateY(-8px);
+  }
+  70% {
+    transform: scale(0.95) translateY(4px);
+  }
+  100% {
+    transform: scale(1) translateY(0);
+  }
 }
 
 /* CTA Button */
@@ -105,11 +125,13 @@ section {
   font-weight: bold;
   margin-top: 15px;
 
+  animation: fadeUp 1s ease-out;
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .cta-button:hover {
   background-color: #222;
+  animation: hoverBounce 0.5s ease;
 }
 
 /* Portfolio links */
@@ -119,6 +141,7 @@ section {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
+  animation: fadeUp 1s ease-out;
 }
 
 .portfolio-link:hover {
@@ -185,7 +208,7 @@ button:hover {
   object-fit: cover;
 }
 
-/* Founder layout */
+/* Founder section */
 .founder-content {
   display: flex;
   align-items: center;
@@ -223,7 +246,13 @@ button:hover {
   border-radius: 10px;
   width: 250px;
   text-align: center;
-}
-.service-card {
+
   animation: fadeUp 0.8s ease-out;
+  transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+}
+
+.pricing-card:hover {
+  background-color: #222;
+  animation: hoverBounce 0.5s ease;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
 }
