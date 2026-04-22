@@ -224,3 +224,6 @@ button:hover {
   width: 250px;
   text-align: center;
 }
+.service-card {
+  animation: fadeUp 0.8s ease-out;
+}
