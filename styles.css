@@ -1,12 +1,5 @@
 
-/* =========================
-   BASE STYLES
-========================= */
-
-* {
-  box-sizing: border-box;
-}
-
+/* General Styles */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -20,15 +13,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
 }
 
-/* Paragraphs */
-p {
-  color: #d1d1d1;
-}
-
-/* =========================
-   NAVBAR
-========================= */
-
+/* Navbar */
 .navbar ul {
   list-style: none;
   display: flex;
@@ -49,19 +34,13 @@ p {
   text-decoration: underline;
 }
 
-/* =========================
-   SECTIONS
-========================= */
-
+/* Sections */
 section {
   padding: 60px 20px;
   text-align: center;
 }
 
-/* =========================
-   TITLES
-========================= */
-
+/* Section Titles */
 .section-title {
   font-size: 3rem;
   font-weight: bold;
@@ -70,6 +49,7 @@ section {
   animation: splash 0.8s ease-out;
 }
 
+/* Splash animation */
 @keyframes splash {
   0% {
     transform: scale(0.6) translateY(-40px);
@@ -85,86 +65,67 @@ section {
   }
 }
 
-/* =========================
-   CARDS (SERVICES + PRICING)
-========================= */
-
-.services-container,
-.pricing-container {
+/* Services Container */
+.services-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
 }
 
-.service-card,
-.pricing-card {
+/* Service Cards */
+.service-card {
+  display: block;
   background-color: #111;
-  padding: 25px 30px;
+  padding: 20px 30px;
   border-radius: 10px;
-  width: 250px;
+
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
   text-align: center;
 
-  border: 1px solid rgba(255,255,255,0.06);
-
-  animation: fadeUp 0.8s ease-out;
-  transition: all 0.25s ease;
-}
-
-/* Hover effect */
-.service-card:hover,
-.pricing-card:hover {
-  background-color: #222;
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(59,130,246,0.15);
-}
-
-/* =========================
-   BUTTONS
-========================= */
-
-.cta-button,
-button {
-  display: inline-block;
-  background-color: #fff;
-  color: #000;
-  padding: 12px 20px;
-  border-radius: 8px;
-  font-weight: bold;
   cursor: pointer;
-  border: none;
+  transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+}
+
+.service-card:hover {
+  background-color: #222;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+/* CTA Button */
+.cta-button {
+  display: inline-block;
+  background-color: #1e1e1e;
+  color: #fff;
+  padding: 15px 25px;
+  border-radius: 10px;
   text-decoration: none;
+  font-weight: bold;
+  margin-top: 15px;
 
-  transition: all 0.25s ease;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.cta-button:hover,
-button:hover {
-  background-color: #e5e5e5;
-  transform: translateY(-2px);
+.cta-button:hover {
+  background-color: #222;
 }
 
-/* =========================
-   PORTFOLIO
-========================= */
-
+/* Portfolio links */
 .portfolio-link {
   display: block;
   margin: 10px 0;
   color: #fff;
   text-decoration: none;
   font-weight: bold;
-  animation: fadeUp 1s ease-out;
 }
 
 .portfolio-link:hover {
   color: #ccc;
 }
 
-/* =========================
-   SOCIAL LINKS
-========================= */
-
+/* Social links */
 .social-links a {
   color: #fff;
   text-decoration: none;
@@ -176,10 +137,7 @@ button:hover {
   color: #ccc;
 }
 
-/* =========================
-   FORMS
-========================= */
-
+/* Forms */
 form {
   max-width: 500px;
   margin: auto;
@@ -188,26 +146,55 @@ form {
   gap: 15px;
 }
 
-input,
-textarea {
+input, textarea {
   padding: 10px;
   background: #111;
   border: 1px solid #fff;
   color: #fff;
 }
 
-/* =========================
-   IMAGES
-========================= */
+button {
+  padding: 12px;
+  background: #fff;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+}
 
+button:hover {
+  background: #ccc;
+}
+
+/* Fade-up animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Founder image */
 .about-pic {
   width: 200px;
-  max-width: 100%;
   height: auto;
   border-radius: 10px;
   object-fit: cover;
 }
 
+/* Founder layout */
+.founder-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Logos */
 .about-logo {
   display: block;
   margin: 10px auto;
@@ -222,31 +209,18 @@ textarea {
   height: auto;
 }
 
-/* =========================
-   ABOUT LAYOUT
-========================= */
-
-.founder-content {
+/* Pricing */
+.pricing-container {
   display: flex;
-  align-items: flex-start;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
-  flex-wrap: wrap;
-  max-width: 1000px;
-  margin: 0 auto;
 }
 
-/* =========================
-   ANIMATIONS
-========================= */
-
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.pricing-card {
+  background-color: #111;
+  padding: 25px 30px;
+  border-radius: 10px;
+  width: 250px;
+  text-align: center;
 }
