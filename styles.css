@@ -271,3 +271,22 @@ button:hover {
   transform: translateY(-6px);
   box-shadow: 0 10px 20px rgba(0,0,0,0.3);
 }
+@media (max-width: 768px) {
+  .navbar ul {
+    gap: 12px;
+    padding: 15px 10px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+    scrollbar-width: none;
+  }
+
+  .navbar ul::-webkit-scrollbar {
+    display: none;
+  }
+
+  .navbar ul li a {
+    font-size: 16px;
+    white-space: nowrap;
+  }
+}
