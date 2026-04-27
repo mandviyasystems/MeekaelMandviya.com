@@ -316,3 +316,25 @@ select:focus {
   border-color: #3b82f6;
   box-shadow: 0 0 10px rgba(59,130,246,0.35);
 }
+.file-upload input[type="file"] {
+  background: #111;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 12px;
+  border-radius: 10px;
+  width: 100%;
+}
+
+/* hides ugly default button styling in modern browsers */
+input[type="file"]::file-selector-button {
+  background: #000;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+input[type="file"]::file-selector-button:hover {
+  background: #222;
+}
