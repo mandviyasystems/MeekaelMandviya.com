@@ -34,11 +34,7 @@
 
   <p id="form-status"></p>
 
-  <form
-    id="contact-form"
-    action="https://formspree.io/f/xkokznql"
-    method="POST"
-  >
+  <form id="contact-form" action="https://formspree.io/f/xkokznql" method="POST">
 
     <input type="text" name="name" placeholder="Your Name" required />
 
@@ -47,16 +43,25 @@
     <input type="text" name="company" placeholder="Company Name (Optional)" />
 
     <!-- SERVICE -->
-    <select name="service" required>
+    <select name="service" id="service" required>
       <option value="">What do you need help with?</option>
       <option>Website Development</option>
       <option>Cloud Infrastructure / AWS</option>
       <option>System Migration</option>
       <option>Support / Maintenance</option>
       <option>Technical Consulting</option>
-      <option>Custom Solution</option>
+      <option value="custom">Custom Solution</option>
       <option>Not Sure Yet</option>
     </select>
+
+    <!-- CUSTOM SERVICE INPUT -->
+    <input 
+      type="text"
+      name="custom_service"
+      id="custom_service"
+      placeholder="Describe your custom request..."
+      style="display:none;"
+    />
 
     <!-- TIMELINE -->
     <select name="timeline" required>
@@ -69,9 +74,11 @@
       <option>Just Exploring</option>
     </select>
 
-    <!-- SCREENSHOTS / FILES -->
-    <label>Attach Screenshots / Files (optional)</label>
-    <input type="file" name="files" multiple accept="image/*,.pdf,.png,.jpg,.jpeg" />
+    <!-- FILE UPLOAD -->
+    <div class="file-upload">
+      <label>Attach Screenshots / Files (optional)</label>
+      <input type="file" name="files" multiple accept="image/*,.pdf,.png,.jpg,.jpeg" />
+    </div>
 
     <textarea
       name="message"
@@ -79,14 +86,12 @@
       required
     ></textarea>
 
-    <button type="submit" id="submit-btn">
-      Send Message
-    </button>
+    <button type="submit" id="submit-btn">Send Message</button>
 
   </form>
 
   <div class="social-links">
-    <h3>Connect With Mandviya Systems</h3>
+    <h3>Connect with Meekael Mandviya</h3>
 
     <a href="https://www.linkedin.com/in/meekael-mandviya-452090297/" target="_blank">
       <i class="fab fa-linkedin"></i> LinkedIn
@@ -105,6 +110,20 @@
 <script>
 AOS.init({ duration: 800, once: true });
 
+/* show custom input */
+document.getElementById("service").addEventListener("change", function () {
+  const custom = document.getElementById("custom_service");
+
+  if (this.value === "custom") {
+    custom.style.display = "block";
+    custom.required = true;
+  } else {
+    custom.style.display = "none";
+    custom.required = false;
+  }
+});
+
+/* form submit */
 const form = document.getElementById("contact-form");
 const status = document.getElementById("form-status");
 const button = document.getElementById("submit-btn");
