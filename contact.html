@@ -8,16 +8,12 @@
   <link rel="icon" href="favicon.png" type="image/png" />
   <link rel="stylesheet" href="styles.css" />
 
-  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-
-  <!-- AOS Animation -->
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 </head>
 
 <body>
 
-<!-- NAVBAR -->
 <header>
   <nav class="navbar">
     <ul>
@@ -31,7 +27,6 @@
   </nav>
 </header>
 
-<!-- CONTACT -->
 <main>
 <section id="contact" data-aos="fade-up">
 
@@ -43,30 +38,15 @@
     id="contact-form"
     action="https://formspree.io/f/xkokznql"
     method="POST"
-    data-aos="fade-up"
-    data-aos-delay="100"
   >
 
-    <input
-      type="text"
-      name="name"
-      placeholder="Your Name"
-      required
-    />
+    <input type="text" name="name" placeholder="Your Name" required />
 
-    <input
-      type="email"
-      name="email"
-      placeholder="Your Email"
-      required
-    />
+    <input type="email" name="email" placeholder="Your Email" required />
 
-    <input
-      type="text"
-      name="company"
-      placeholder="Company Name (Optional)"
-    />
+    <input type="text" name="company" placeholder="Company Name (Optional)" />
 
+    <!-- SERVICE -->
     <select name="service" required>
       <option value="">What do you need help with?</option>
       <option>Website Development</option>
@@ -78,13 +58,20 @@
       <option>Not Sure Yet</option>
     </select>
 
+    <!-- TIMELINE -->
     <select name="timeline" required>
       <option value="">Desired Timeline</option>
       <option>ASAP</option>
       <option>This Month</option>
-      <option>1 - 3 Months</option>
+      <option>1–3 Months</option>
+      <option>Flexible / Depends</option>
+      <option>Custom Timeline</option>
       <option>Just Exploring</option>
     </select>
+
+    <!-- SCREENSHOTS / FILES -->
+    <label>Attach Screenshots / Files (optional)</label>
+    <input type="file" name="files" multiple accept="image/*,.pdf,.png,.jpg,.jpeg" />
 
     <textarea
       name="message"
@@ -98,23 +85,14 @@
 
   </form>
 
-  <!-- SOCIAL -->
-  <div class="social-links" data-aos="fade-up" data-aos-delay="300">
+  <div class="social-links">
     <h3>Connect With Mandviya Systems</h3>
 
-    <a
-      href="https://www.linkedin.com/in/meekael-mandviya-452090297/"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
+    <a href="https://www.linkedin.com/in/meekael-mandviya-452090297/" target="_blank">
       <i class="fab fa-linkedin"></i> LinkedIn
     </a>
 
-    <a
-      href="https://www.instagram.com/meekael_mandviya"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
+    <a href="https://www.instagram.com/meekael_mandviya" target="_blank">
       <i class="fab fa-instagram"></i> Instagram
     </a>
   </div>
@@ -122,24 +100,17 @@
 </section>
 </main>
 
-<!-- AOS -->
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-  AOS.init({
-    duration: 800,
-    once: true
-  });
-});
+AOS.init({ duration: 800, once: true });
 
-/* FORM SUBMIT */
 const form = document.getElementById("contact-form");
 const status = document.getElementById("form-status");
 const button = document.getElementById("submit-btn");
 
-form.addEventListener("submit", async function(event) {
-  event.preventDefault();
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
 
   button.disabled = true;
   button.textContent = "Sending...";
@@ -148,22 +119,19 @@ form.addEventListener("submit", async function(event) {
   const data = new FormData(form);
 
   try {
-    const response = await fetch(form.action, {
+    const res = await fetch(form.action, {
       method: "POST",
       body: data,
-      headers: {
-        Accept: "application/json"
-      }
+      headers: { Accept: "application/json" }
     });
 
-    if (response.ok) {
+    if (res.ok) {
       status.textContent = "Thanks! Your message has been sent.";
       form.reset();
     } else {
       status.textContent = "Something went wrong. Please try again.";
     }
-
-  } catch (error) {
+  } catch {
     status.textContent = "Network error. Please try again.";
   }
 
