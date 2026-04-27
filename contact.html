@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact - Meekael Mandviya</title>
+  <title>Contact - Mandviya Systems</title>
 
   <link rel="icon" href="favicon.png" type="image/png" />
   <link rel="stylesheet" href="styles.css" />
@@ -17,161 +17,160 @@
 
 <body>
 
-  <!-- NAVBAR -->
-  <header>
-    <nav class="navbar">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="pricing.html">Pricing</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+<!-- NAVBAR -->
+<header>
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 
-  <!-- CONTACT SECTION -->
-  <main>
-    <section id="contact" data-aos="fade-up">
+<!-- CONTACT -->
+<main>
+<section id="contact" data-aos="fade-up">
 
-      <h2 data-aos="fade-up">Contact Me</h2>
+  <h1 class="section-title">Contact Me</h1>
 
-      <!-- SUCCESS / ERROR MESSAGE -->
-      <p id="form-status"></p>
+  <p id="form-status"></p>
 
-      <!-- FORM -->
-      <form
-        id="contact-form"
-        action="https://formspree.io/f/xkokznql"
-        method="POST"
-        data-aos="fade-up"
-        data-aos-delay="100"
-      >
+  <form
+    id="contact-form"
+    action="https://formspree.io/f/xkokznql"
+    method="POST"
+    data-aos="fade-up"
+    data-aos-delay="100"
+  >
 
-        <input
-          type="text"
-          name="name"
-          placeholder="Your Name"
-          required
-          data-aos="fade-up"
-          data-aos-delay="150"
-        />
+    <input
+      type="text"
+      name="name"
+      placeholder="Your Name"
+      required
+    />
 
-        <input
-          type="email"
-          name="email"
-          placeholder="Your Email"
-          required
-          data-aos="fade-up"
-          data-aos-delay="200"
-        />
+    <input
+      type="email"
+      name="email"
+      placeholder="Your Email"
+      required
+    />
 
-        <input
-          type="text"
-          name="service"
-          placeholder="What service do you need?"
-          required
-          data-aos="fade-up"
-          data-aos-delay="225"
-        />
+    <input
+      type="text"
+      name="company"
+      placeholder="Company Name (Optional)"
+    />
 
-        <textarea
-          name="message"
-          placeholder="Describe your project, issue, or goal..."
-          required
-          data-aos="fade-up"
-          data-aos-delay="250"
-        ></textarea>
+    <select name="service" required>
+      <option value="">What do you need help with?</option>
+      <option>Website Development</option>
+      <option>Cloud Infrastructure / AWS</option>
+      <option>System Migration</option>
+      <option>Support / Maintenance</option>
+      <option>Technical Consulting</option>
+      <option>Custom Solution</option>
+      <option>Not Sure Yet</option>
+    </select>
 
-        <button
-          type="submit"
-          id="submit-btn"
-          data-aos="fade-up"
-          data-aos-delay="300"
-        >
-          Send Message
-        </button>
+    <select name="timeline" required>
+      <option value="">Desired Timeline</option>
+      <option>ASAP</option>
+      <option>This Month</option>
+      <option>1 - 3 Months</option>
+      <option>Just Exploring</option>
+    </select>
 
-      </form>
+    <textarea
+      name="message"
+      placeholder="Describe your project, issue, or goal..."
+      required
+    ></textarea>
 
-      <!-- SOCIAL LINKS -->
-      <div
-        class="social-links"
-        data-aos="fade-up"
-        data-aos-delay="350"
-      >
-        <h3>Connect with me</h3>
+    <button type="submit" id="submit-btn">
+      Send Message
+    </button>
 
-        <a
-          href="https://www.linkedin.com/in/meekael-mandviya-452090297/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <i class="fab fa-linkedin"></i> LinkedIn
-        </a>
+  </form>
 
-        <a
-          href="https://www.instagram.com/meekael_mandviya"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <i class="fab fa-instagram"></i> Instagram
-        </a>
-      </div>
+  <!-- SOCIAL -->
+  <div class="social-links" data-aos="fade-up" data-aos-delay="300">
+    <h3>Connect With Mandviya Systems</h3>
 
-    </section>
-  </main>
+    <a
+      href="https://www.linkedin.com/in/meekael-mandviya-452090297/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <i class="fab fa-linkedin"></i> LinkedIn
+    </a>
 
-  <!-- AOS SCRIPT -->
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <a
+      href="https://www.instagram.com/meekael_mandviya"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <i class="fab fa-instagram"></i> Instagram
+    </a>
+  </div>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      AOS.init({
-        duration: 800,
-        once: true
-      });
-    });
+</section>
+</main>
 
-    /* SAME-PAGE FORM SUBMIT */
-    const form = document.getElementById("contact-form");
-    const status = document.getElementById("form-status");
-    const button = document.getElementById("submit-btn");
+<!-- AOS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 
-    form.addEventListener("submit", async function (event) {
-      event.preventDefault();
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  AOS.init({
+    duration: 800,
+    once: true
+  });
+});
 
-      button.disabled = true;
-      button.textContent = "Sending...";
-      status.textContent = "";
+/* FORM SUBMIT */
+const form = document.getElementById("contact-form");
+const status = document.getElementById("form-status");
+const button = document.getElementById("submit-btn");
 
-      const data = new FormData(form);
+form.addEventListener("submit", async function(event) {
+  event.preventDefault();
 
-      try {
-        const response = await fetch(form.action, {
-          method: "POST",
-          body: data,
-          headers: {
-            Accept: "application/json"
-          }
-        });
+  button.disabled = true;
+  button.textContent = "Sending...";
+  status.textContent = "";
 
-        if (response.ok) {
-          status.textContent = "Thanks! Your message has been sent.";
-          form.reset();
-        } else {
-          status.textContent = "Something went wrong. Please try again.";
-        }
+  const data = new FormData(form);
 
-      } catch (error) {
-        status.textContent = "Network error. Please try again.";
+  try {
+    const response = await fetch(form.action, {
+      method: "POST",
+      body: data,
+      headers: {
+        Accept: "application/json"
       }
-
-      button.disabled = false;
-      button.textContent = "Send Message";
     });
-  </script>
+
+    if (response.ok) {
+      status.textContent = "Thanks! Your message has been sent.";
+      form.reset();
+    } else {
+      status.textContent = "Something went wrong. Please try again.";
+    }
+
+  } catch (error) {
+    status.textContent = "Network error. Please try again.";
+  }
+
+  button.disabled = false;
+  button.textContent = "Send Message";
+});
+</script>
 
 </body>
 </html>
