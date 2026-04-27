@@ -290,3 +290,29 @@ button:hover {
     white-space: nowrap;
   }
 }
+/* Contact Form Select Boxes */
+select {
+  padding: 12px;
+  background: #111;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  font-size: 16px;
+  width: 100%;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+/* Dropdown options */
+select option {
+  background: #111;
+  color: #fff;
+}
+
+/* Hover / focus */
+select:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 10px rgba(59,130,246,0.35);
+}
