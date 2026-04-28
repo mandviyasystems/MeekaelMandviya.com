@@ -56,7 +56,12 @@
       placeholder="Company Name (Optional)"
     />
 
-    <!-- SERVICE -->
+    <input
+      type="url"
+      name="website"
+      placeholder="Company Website (Optional)"
+    />
+
     <input
       type="text"
       name="service"
@@ -64,28 +69,13 @@
       required
     />
 
-    <!-- TIMELINE -->
-    <select name="timeline" id="timeline" required>
-      <option value="">Desired Timeline</option>
-      <option>ASAP</option>
-      <option>This Week</option>
-      <option>This Month</option>
-      <option>1–3 Months</option>
-      <option>Flexible</option>
-      <option value="custom">Custom Timeline</option>
-      <option>Just Exploring</option>
-    </select>
-
-    <!-- CUSTOM TIMELINE -->
     <input
       type="text"
-      name="custom_timeline"
-      id="custom_timeline"
-      placeholder="Enter your preferred timeline..."
-      style="display:none;"
+      name="timeline"
+      placeholder="Desired Timeline (e.g. ASAP, 2 Weeks, Flexible)"
+      required
     />
 
-    <!-- FILE UPLOAD -->
     <div class="file-upload">
       <label>Attach Screenshots / Files (optional)</label>
       <input
@@ -111,19 +101,11 @@
   <div class="social-links">
     <h3>Connect with Meekael Mandviya</h3>
 
-    <a
-      href="https://www.linkedin.com/in/meekael-mandviya-452090297/"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
+    <a href="https://www.linkedin.com/in/meekael-mandviya-452090297/" target="_blank" rel="noopener noreferrer">
       <i class="fab fa-linkedin"></i> LinkedIn
     </a>
 
-    <a
-      href="https://www.instagram.com/meekael_mandviya"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
+    <a href="https://www.instagram.com/meekael_mandviya" target="_blank" rel="noopener noreferrer">
       <i class="fab fa-instagram"></i> Instagram
     </a>
   </div>
@@ -139,26 +121,11 @@ AOS.init({
   once: true
 });
 
-/* CUSTOM TIMELINE */
-document.getElementById("timeline").addEventListener("change", function () {
-  const customBox = document.getElementById("custom_timeline");
-
-  if (this.value === "custom") {
-    customBox.style.display = "block";
-    customBox.required = true;
-  } else {
-    customBox.style.display = "none";
-    customBox.required = false;
-    customBox.value = "";
-  }
-});
-
-/* FORM SUBMIT */
 const form = document.getElementById("contact-form");
 const status = document.getElementById("form-status");
 const button = document.getElementById("submit-btn");
 
-form.addEventListener("submit", async function (e) {
+form.addEventListener("submit", async function(e) {
   e.preventDefault();
 
   button.disabled = true;
@@ -179,7 +146,6 @@ form.addEventListener("submit", async function (e) {
     if (response.ok) {
       status.textContent = "Thanks! Your message has been sent.";
       form.reset();
-      document.getElementById("custom_timeline").style.display = "none";
     } else {
       status.textContent = "Something went wrong. Please try again.";
     }
