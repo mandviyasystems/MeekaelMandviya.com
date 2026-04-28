@@ -1,163 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact - Mandviya Systems</title>
+<!-- SERVICE -->
+<input
+  type="text"
+  name="service"
+  placeholder="What do you need help with?"
+  required
+/>
 
-  <link rel="icon" href="favicon.png" type="image/png" />
-  <link rel="stylesheet" href="styles.css" />
+<!-- TIMELINE (DROPDOWN) -->
+<select name="timeline" id="timeline" required>
+  <option value="">Desired Timeline</option>
+  <option>ASAP</option>
+  <option>This Week</option>
+  <option>This Month</option>
+  <option>1–3 Months</option>
+  <option>Flexible</option>
+  <option value="custom">Custom Timeline</option>
+  <option>Just Exploring</option>
+</select>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-</head>
-
-<body>
-
-<header>
-  <nav class="navbar">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="portfolio.html">Portfolio</a></li>
-      <li><a href="pricing.html">Pricing</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-</header>
-
-<main>
-<section id="contact" data-aos="fade-up">
-
-  <h1 class="section-title">Contact Me</h1>
-
-  <p id="form-status"></p>
-
-  <form id="contact-form" action="https://formspree.io/f/xkokznql" method="POST">
-
-    <input
-      type="text"
-      name="name"
-      placeholder="Your Name"
-      required
-    />
-
-    <input
-      type="email"
-      name="email"
-      placeholder="Your Email"
-      required
-    />
-
-    <input
-      type="text"
-      name="company"
-      placeholder="Company Name (Optional)"
-    />
-
-    <input
-      type="url"
-      name="website"
-      placeholder="Company Website (Optional)"
-    />
-
-    <input
-      type="text"
-      name="service"
-      placeholder="What do you need help with?"
-      required
-    />
-
-    <input
-      type="text"
-      name="timeline"
-      placeholder="Desired Timeline (e.g. ASAP, 2 Weeks, Flexible)"
-      required
-    />
-
-    <div class="file-upload">
-      <label>Attach Screenshots / Files (optional)</label>
-      <input
-        type="file"
-        name="files"
-        multiple
-        accept="image/*,.pdf,.png,.jpg,.jpeg"
-      />
-    </div>
-
-    <textarea
-      name="message"
-      placeholder="Describe your project, issue, or goal..."
-      required
-    ></textarea>
-
-    <button type="submit" id="submit-btn">
-      Send Message
-    </button>
-
-  </form>
-
-  <div class="social-links">
-    <h3>Connect with Meekael Mandviya</h3>
-
-    <a href="https://www.linkedin.com/in/meekael-mandviya-452090297/" target="_blank" rel="noopener noreferrer">
-      <i class="fab fa-linkedin"></i> LinkedIn
-    </a>
-
-    <a href="https://www.instagram.com/meekael_mandviya" target="_blank" rel="noopener noreferrer">
-      <i class="fab fa-instagram"></i> Instagram
-    </a>
-  </div>
-
-</section>
-</main>
-
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-
-<script>
-AOS.init({
-  duration: 800,
-  once: true
-});
-
-const form = document.getElementById("contact-form");
-const status = document.getElementById("form-status");
-const button = document.getElementById("submit-btn");
-
-form.addEventListener("submit", async function(e) {
-  e.preventDefault();
-
-  button.disabled = true;
-  button.textContent = "Sending...";
-  status.textContent = "";
-
-  const data = new FormData(form);
-
-  try {
-    const response = await fetch(form.action, {
-      method: "POST",
-      body: data,
-      headers: {
-        Accept: "application/json"
-      }
-    });
-
-    if (response.ok) {
-      status.textContent = "Thanks! Your message has been sent.";
-      form.reset();
-    } else {
-      status.textContent = "Something went wrong. Please try again.";
-    }
-
-  } catch (error) {
-    status.textContent = "Network error. Please try again.";
-  }
-
-  button.disabled = false;
-  button.textContent = "Send Message";
-});
-</script>
-
-</body>
-</html>
+<!-- CUSTOM TIMELINE INPUT -->
+<input
+  type="text"
+  name="custom_timeline"
+  id="custom_timeline"
+  placeholder="Enter your custom timeline..."
+  style="display:none;"
+/>
