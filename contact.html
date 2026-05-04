@@ -30,7 +30,21 @@
 <main>
 <section id="contact" data-aos="fade-up">
 
-  <h1 class="section-title">Contact Me</h1>
+  <h1 class="section-title">Contact</h1>
+
+  <p>
+    Have a project in mind? Send a message below or book a discovery call to speak directly.
+  </p>
+
+  <!-- PRIMARY CTA -->
+  <a href="YOUR_BOOKING_LINK_HERE" class="cta-button" target="_blank">
+    Book a Discovery Call
+  </a>
+
+  <p style="margin: 15px 0;">
+    Prefer to send details first? Fill out the form below.
+  </p>
+
   <p id="form-status"></p>
 
   <form id="contact-form" action="https://formspree.io/f/xkokznql" method="POST">
@@ -41,7 +55,15 @@
     <input type="text" name="company" placeholder="Company Name (Optional)" />
     <input type="url" name="website" placeholder="Company Website (Optional)" />
 
-    <input type="text" name="service" placeholder="What do you need help with?" required />
+    <!-- SERVICE TYPE -->
+    <select name="service" required>
+      <option value="">What do you need help with?</option>
+      <option>Website Creation</option>
+      <option>Website Deployment</option>
+      <option>Cloud Migration</option>
+      <option>Post-Migration Support</option>
+      <option>Not Sure Yet</option>
+    </select>
 
     <!-- TIMELINE -->
     <select name="timeline" id="timeline" required>
@@ -104,7 +126,6 @@
 <script>
 AOS.init({ duration: 800, once: true });
 
-/* show custom timeline input */
 document.getElementById("timeline").addEventListener("change", function () {
   const custom = document.getElementById("custom_timeline");
 
@@ -118,7 +139,6 @@ document.getElementById("timeline").addEventListener("change", function () {
   }
 });
 
-/* form submit */
 const form = document.getElementById("contact-form");
 const status = document.getElementById("form-status");
 const button = document.getElementById("submit-btn");
